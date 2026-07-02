@@ -52,8 +52,11 @@ table{
 }
 
 
-
 #table{
     background-color: white;
     width: 400%;
+}
+
+h3{
+    font-size: 150%;
 }
