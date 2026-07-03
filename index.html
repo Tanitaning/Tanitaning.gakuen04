@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <script src="script.js"></script>
+  <title>5なぜ報告管理システム</title>
+  <link rel="stylesheet" href="style.css" />
+
+<!-- Chart.jsライブラリの読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      /* メインコンテナのスタイル */
+      main {
+        width: 80%;
+        display: flex;
+        margin-top: 90px;
+      }
+      /* グラフを表示するためのスタイル */
+      #js-result {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        gap: 20px;
+      }
+      /* キャンバス（グラフ）自体のスタイル */
+      canvas {
+        flex: 1 0 48%;
+        max-width: 100%;
+        height: 50vh;
+        margin-bottom: 20px;
+      }
+    </style>
+
+</head>
+
+<body>
+  
+  <div class="title">
+    <h1>5なぜ報告管理システム</h1>
+  </div>
+
+  <div class="abc"></div>
+  
+<div class="aaaaa">
+  <div class = "sub">
+
+
+  <br>
+  <img src="https://kotonohaworks.com/free-icons/wp-content/uploads/kkrn_icon_modoru_16.png" width="60" height="60">
+  <a href = 'index.html'>トップページ</a><br><br>
+  <img src="https://icon-pit.com/wp-content/uploads/2020/10/binder_14682.png" width="60" height="60">
+  <a href= 'news.html'>お知らせ</a><br><br>
+  <img src="https://icon-pit.com/wp-content/uploads/2019/01/pen_icon_4442-300x300.png" width="60" height="60">
+  <a href= 'write.html'>記入</a><br><br>
+  <img src="https://icon-pit.com/wp-content/uploads/2018/10/mushimegane_search_icon_1024.png" width="60" height="60">
+  <a href= 'search.html'>検索</a><br>
+
+  </div>
+
+
+ 
+<main>
+      <!-- グラフを表示するコンテナ -->
+      <div id="js-result">
+
+  </div >
+
+
+    <script>
+      // グラフを描画するためのキャンバス要素を生成する関数
+      const result = document.getElementById("js-result");
+      const createCanvas = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = 400;
+        canvas.height = 200;
+        result.appendChild(canvas);
+        return canvas;
+      };
+
+      // ここに試したいchart機能を入れます
+      const barChart = new Chart(createCanvas(), {
+  type: "bar",
+  data: {
+    labels: ["学園", "職場", "バス内", "寮", "その他",],
+    datasets: [{
+      label: " 発生場所　年間統計棒グラフ",
+      data: [12, 8, 19, 5, 2,],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.5)",
+        "rgba(54, 162, 235, 0.5)",
+        "rgba(255, 206, 86, 0.5)",
+        "rgba(75, 192, 192, 0.5)",
+        "rgba(153, 102, 255, 0.5)",
+      ],
+      borderColor: [
+        "rgba(255, 99, 132, 1)",
+        "rgba(54, 162, 235, 1)",
+        "rgba(255, 206, 86, 1)",
+        "rgba(75, 192, 192, 1)",
+        "rgba(153, 102, 255, 1)",
+      ],
+      borderWidth: 1,
+    }],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+});
+
+      
+    </script>
+
+
+</body>
+
+</html>
