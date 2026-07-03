@@ -65,7 +65,14 @@ function searchToBrowser(){
     const divf = document.querySelector("#basyo");
     divf.appendChild(div6);
 
-    //上記divに対して、17行目の値を代入したい 
+    const result = document.querySelector("#cmm")
+    const omikuji =["管理者コメント：今の自分に何ができるか考えよう😁😁😁",
+        "管理者コメント：周りのみんなにも情報を共有しよう👍👍👍",
+        "管理者コメント：同じ内容が繰り返されないためになにができるかな？",
+        "管理者コメント：今一度自分の行動を見直そう⚠️⚠️⚠️" ]
+    const number = Math.floor(Math.random() * omikuji.length);
+    result.textContent = omikuji[number]
+
 }
 
 
