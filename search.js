@@ -12,6 +12,10 @@ function searchToBrowser(){
 
     //その名前を使って、Valueの値を取得してデータにアクセス
     const sample = localStorage.getItem(name);
+     if (!sample) {
+        alert("該当するデータがありません");
+        return;
+    }
     const data = JSON.parse(sample);
 
     const naiyou = data.naiyou
